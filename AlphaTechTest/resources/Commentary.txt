@@ -1,0 +1,12 @@
+Assumptions:
+1) Words are separated by spaces and punctutation such as full stops and commas.  This is why I used a regex to represent this.
+2) Using a set instead of a list to represent word uniqueness.
+3) Using sortedset and tree set to allow me to override default string compare behaviour.
+4) Default Integer.compare(string1.length, string2.length) was returning items in ascending order whereas my solution needed descending hence why I override it.
+
+Improvements:
+1) Separate the file reading into a protected method to enable the file retrieval bit to be easily mocked (i.e) method stubbing to enable unit tests.
+2) Add in unit tests to verify behaviour.
+3) Enhance processWords method to do checking on file length then and there.  It may speed up my algorithm.
+4) I'm not convinced that my treeset approach isn't 100% correct.  I noticed in debugging only 22 records were being represented.  You mentioned you didn't want me to spend too long but this part needs to be tweaked.  I hope I've shown enought to demonstrate my coding though process.
+5) Dynamic file retrieval as opposed to just assuming the file will be in the resources directory and hence classpath.
